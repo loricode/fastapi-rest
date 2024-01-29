@@ -13,12 +13,12 @@ def list_products():
    return JSONResponse(content=result)
 
 @routerProduct.post("/product/get")
-def get_one_products(product:ProductId):
+def get_one_product(product:ProductId):
    result = get_product(product.id)
    return result
 
 @routerProduct.post("/product/add")
-def add_products(product:Product):
+def add_product(product:Product):
    result = insert_product(product)
    return result
 
